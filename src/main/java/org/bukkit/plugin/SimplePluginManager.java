@@ -547,10 +547,10 @@ public final class SimplePluginManager implements PluginManager {
     }
 
     private Class<? extends Event> getRegistrationClass(Class<? extends Event> clazz) {
-		return getRegistrationClass(clazz, null);
-	}
+        return getRegistrationClass(clazz, null);
+    }
 
-	private Class<? extends Event> getRegistrationClass(Class<? extends Event> clazz, String childClassName) {
+    private Class<? extends Event> getRegistrationClass(Class<? extends Event> clazz, String childClassName) {
         try {
             clazz.getDeclaredMethod("getHandlerList");
             return clazz;
